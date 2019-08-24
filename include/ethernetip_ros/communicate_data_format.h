@@ -15,7 +15,7 @@ public:
 
   virtual size_t getLength(void) const;
   virtual eip::serialization::Writer& serialize(eip::serialization::Writer& writer) const;
-  virtual eip::serialization::Reader& deserialize(eip::serialization::Reader& reader) const;
+  virtual eip::serialization::Reader& deserialize(eip::serialization::Reader& reader);
 };
 }  // namespace eip_ros
 

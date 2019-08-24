@@ -1,22 +1,22 @@
-#include <ethernetip_ros/communicate_data_format>
+#include <ethernetip_ros/communicate_data_format.h>
 
 using eip_ros::CommunicateDataStructure;
 
 // Class methods definitions
 
-virtual size_t CommunicateDataStructure::getLength(void) const
+size_t CommunicateDataStructure::getLength(void) const
 {
   return sizeof(sequence_num);
 }
 
-virtual eip::serialization::Writer& CommunicateDataStructure::serialize(eip::serialization::Writer& writer) const
+eip::serialization::Writer& CommunicateDataStructure::serialize(eip::serialization::Writer& writer) const
 {
-  writer::write(sequence_num);
+  writer.write(sequence_num);
   return writer;
 }
 
-virtual eip::serialization::Reader& CommunicateDataStructure::deserialize(eip::serialization::Reader& reader) const
+eip::serialization::Reader& CommunicateDataStructure::deserialize(eip::serialization::Reader& reader)
 {
-  reader::read(sequence_num);
+  reader.read(sequence_num);
   return reader;
 }
