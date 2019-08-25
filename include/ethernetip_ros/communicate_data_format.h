@@ -8,7 +8,7 @@
 
 namespace eip_ros
 {
-class CommunicateDataStructure : public eip::serialization::Serializable
+class CommunicateDataFormat : public eip::serialization::Serializable
 {
 public:
   EIP_UINT sequence_num;
