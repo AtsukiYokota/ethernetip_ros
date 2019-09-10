@@ -22,6 +22,11 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+# add_executable(ss
+#   src/simple_session.cpp)
+# target_link_libraries(ss
+#   ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
